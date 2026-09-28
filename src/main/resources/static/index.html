@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Film Jury</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        🎬 FilmJury
+    </div>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#submit">Submit Film</a>
+        <a href="#entries">Entries</a>
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero" id="dashboard">
+
+        <div class="hero-content">
+            <p class="tag">FILM JURY MANAGEMENT SYSTEM</p>
+
+            <h1>
+                Discover.
+                <span>Judge.</span>
+                Celebrate.
+            </h1>
+
+            <p class="hero-text">
+                Manage film submissions, review entries and keep track
+                of your jury evaluation process.
+            </p>
+
+            <a href="#submit" class="primary-btn">
+                Submit a Film
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <span>🎬</span>
+            <h2 id="totalEntries">0</h2>
+            <p>Total Entries</p>
+        </div>
+
+        <div class="stat-card">
+            <span>👥</span>
+            <h2 id="totalTeams">0</h2>
+            <p>Teams</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🏆</span>
+            <h2 id="topFilm">-</h2>
+            <p>Top Film</p>
+        </div>
+
+    </section>
+
+
+    <!-- SUBMIT -->
+    <section class="section" id="submit">
+
+        <div class="section-heading">
+            <p class="tag">SUBMISSION</p>
+            <h2>Submit Your Film</h2>
+            <p>
+                Enter the details of your film below.
+            </p>
+        </div>
+
+        <form id="entryForm" class="form-card">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="title">Film Title</label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Enter film title"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="teamName">Team Name</label>
+
+                    <input
+                        type="text"
+                        id="teamName"
+                        name="teamName"
+                        placeholder="Enter team name"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="team@example.com"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="videoUrl">Video URL</label>
+
+                    <input
+                        type="url"
+                        id="videoUrl"
+                        name="videoUrl"
+                        placeholder="https://..."
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <button type="submit" class="primary-btn">
+                Submit Film
+            </button>
+
+        </form>
+
+        <div id="formMessage"></div>
+
+    </section>
+
+
+    <!-- ENTRIES -->
+    <section class="section" id="entries">
+
+        <div class="section-heading">
+
+            <p class="tag">FILM ENTRIES</p>
+
+            <h2>Submitted Films</h2>
+
+            <p>
+                View and manage submitted films.
+            </p>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Film</th>
+                        <th>Team</th>
+                        <th>Email</th>
+                        <th>Video</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="entriesTable">
+
+                    <tr>
+                        <td colspan="6" class="loading">
+                            Loading entries...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 FilmJury
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
